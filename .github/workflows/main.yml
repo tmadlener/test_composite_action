@@ -6,6 +6,11 @@ jobs:
     name: A job to test composite actions
     steps:
       - uses: actions/checkout@v2
-      - uses: tmadlener/composit_action_test@eadef3200c2f6f6efe662d6f2706a098d4a04387
+      - uses: tmadlener/composit_action_test@master
         with:
           greeted: 'Thomas the tester'
+          substeps:
+            - step1: Test step1
+              run: echo "Hello"
+            - step2: Test step2
+              run: echo "Hello again"
