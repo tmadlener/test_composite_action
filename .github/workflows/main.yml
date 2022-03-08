@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  composite_action_test:
+    runs-on: ubuntu-latest
+    name: A job to test composite actions
+    steps:
+      - uses: actions/checkout@v2
+      - uses: tmadlener/composit_action_test@eadef3200c2f6f6efe662d6f2706a098d4a04387
+        with:
+          greeted: 'Thomas the tester'
